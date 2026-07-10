@@ -1,0 +1,68 @@
+﻿<%@ Page Title="Edit Employee" Language="C#" MasterPageFile="~/Site1.Master"
+    AutoEventWireup="true" CodeBehind="edit.aspx.cs"
+    Inherits="WebApplication7.edit" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+
+    <link href="edit.css" rel="stylesheet" type="text/css" />
+
+</asp:Content>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
+<div class="edit-container">
+
+    <table class="edit-table">
+
+        <tr>
+            <td>Employee ID<asp:Button ID="Button3" runat="server" OnClick="Button3_Click" Text="search" />
+            </td>
+            <td>
+                <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Employee Name</td>
+            <td>
+                <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Department</td>
+            <td>
+                <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Salary</td>
+            <td>
+                <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2" class="button-area">
+
+                <asp:Button
+                    ID="Button1"
+                    runat="server"
+                    Text="Update Employee"
+                    CssClass="update-btn" />
+
+                <asp:Button
+                    ID="Button2"
+                    runat="server"
+                    Text="Delete Employee"
+                    CssClass="delete-btn" />
+
+            </td>
+        </tr>
+
+    </table>
+
+</div>
+
+</asp:Content>

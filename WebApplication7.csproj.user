@@ -1,0 +1,188 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="WebApplication7.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Employee Management System</title>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <style type="text/css">
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+
+        body {
+            background: #f4f7fc;
+        }
+
+        /* Header */
+
+        .header {
+            width: 100%;
+            background: #1e3a8a;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            font-size: 32px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            box-shadow: 0 3px 10px rgba(0,0,0,.2);
+        }
+
+        /* Navigation */
+
+        .navbar {
+            background: #163172;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 20px;
+            font-size: 17px;
+            font-weight: 600;
+            transition: .3s;
+        }
+
+        .navbar a:hover {
+            color: gold;
+        }
+
+        /* Main Content */
+
+        .content {
+            width: 90%;
+            margin: 30px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,.1);
+            min-height: 500px;
+        }
+
+        /* Footer */
+
+        .footer {
+            background: #1e3a8a;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+        }
+
+        /* Buttons */
+
+        .btn {
+            background: #1e3a8a;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #163172;
+        }
+
+        /* TextBox */
+
+        input[type=text],
+        input[type=password],
+        input[type=email],
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+        }
+
+        /* GridView */
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table th {
+            background: #1e3a8a;
+            color: white;
+            padding: 12px;
+        }
+
+        table td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        table tr:nth-child(even) {
+            background: #f2f2f2;
+        }
+
+        table tr:hover {
+            background: #e8efff;
+        }
+
+        .auto-style1 {
+            width: 100%;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="header">
+        EMPLOYEE MANAGEMENT SYSTEM
+    </div>
+
+    <form id="form1" runat="server">
+
+    <div class="navbar">
+        <table class="auto-style1">
+            <tr>
+                <td>
+                    <asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="~/new_employee.aspx">New Employee</asp:LinkButton>
+                </td>
+                <td>
+                    <asp:LinkButton ID="LinkButton2" runat="server" PostBackUrl="~/Search.aspx">Search</asp:LinkButton>
+                </td>
+                <td>
+                    <asp:LinkButton ID="LinkButton3" runat="server" PostBackUrl="~/list.aspx">List</asp:LinkButton>
+                </td>
+                <td>
+                    <asp:LinkButton ID="LinkButton4" runat="server" PostBackUrl="~/edit.aspx">Edit</asp:LinkButton>
+                </td>
+                <td>
+                    <asp:LinkButton ID="LinkButton5" runat="server">LogOut</asp:LinkButton>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+        <div class="content">
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+
+        </div>
+
+    </form>
+
+   
+
+</body>
+</html>
